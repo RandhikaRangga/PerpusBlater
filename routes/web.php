@@ -28,6 +28,11 @@ Route::get('/dashboard', function(){
 Route::get('/anggota', function(){
     return view('Layouts.anggota');
 });
+use App\Http\Controllers\AuthController;
+
+// ...
+
+Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 Route::resource('/buku', \App\Http\Controllers\BukuController::class);
 
