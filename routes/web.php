@@ -17,4 +17,18 @@ Route::get('/', function () {
     return view('home');
 });
 
+// Route::get('/', function () {
+//     return view('Layouts.main');
+// });
+
+Route::get('/dashboard', function(){
+    return view('Layouts.dashboard');
+});
+
+Route::get('/anggota', function(){
+    return view('Layouts.anggota');
+});
+
+Route::resource('/buku', \App\Http\Controllers\BukuController::class);
+
 // Route Welcome
